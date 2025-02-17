@@ -1,9 +1,9 @@
 <script>
-  // Check if the pathname is empty or just "/"
-  if (location.pathname === "/" || location.pathname === "") {
-    location.replace(location.origin + "/index.html");
-  } else {
-    // Redirect to index.html while preserving the path, query params, and hash
+  var currentUrl = location.href;
+
+  // Check if "index.html" is already present to avoid looping
+  if (!currentUrl.includes("index.html")) {
+    // Preserve the path, query params, and hash
     var path = location.pathname + location.search + location.hash;
     location.replace(location.origin + "/index.html" + path);
   }
