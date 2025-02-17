@@ -31,13 +31,14 @@
 
     <title>xdocapp</title>
     <link rel="manifest" href="manifest.json" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/url_launcher_web/url_launcher_web.js"></script> -->
     <script>
-    if (sessionStorage.redirect) {
-      const redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      window.history.replaceState({}, '', redirect);
-    }
-  </script>
+      if (sessionStorage.redirect) {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        window.history.replaceState({}, "", redirect);
+      }
+    </script>
   </head>
   <body>
     <script src="flutter_bootstrap.js" async></script>
