@@ -1,0 +1,11 @@
+<script>
+  if (sessionStorage.getItem("redirected") !== "true") {
+    sessionStorage.setItem("redirected", "true");
+    const path = location.pathname + location.search + location.hash;
+    console.log('path', path);
+    console.log('origin', location.origin);
+    location.replace(location.origin + path);
+  } else {
+    sessionStorage.removeItem("redirected");
+  }
+</script>
