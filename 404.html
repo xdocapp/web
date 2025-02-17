@@ -4,7 +4,7 @@
     const path = location.pathname;
     const query = location.search;
     const hash = location.hash;
-    const newUrl = location.origin + "/index.html" + (query ? '?'+ query : "") + (hash ? hash : "");
+    const newUrl = location.origin + "/index.html" + (query ? '?'+ query : "") + path + (hash ? hash : "");
     location.replace(newUrl);
   }
 </script>
