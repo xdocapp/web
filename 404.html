@@ -1,10 +1,11 @@
-<script>
-  var currentUrl = location.href;
-
-  // Check if "index.html" is already present to avoid looping
-  if (!currentUrl.includes("index.html")) {
-    // Preserve the path, query params, and hash
-    var path = location.pathname + location.search + location.hash;
-    location.replace(location.origin + "/index.html?" + path);
-  }
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Redirect all paths to index.html
+      sessionStorage.redirect = location.pathname + location.search;
+      window.location.replace('/');
+    </script>
+  </head>
+  <body></body>
+</html>
