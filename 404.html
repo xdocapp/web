@@ -1,10 +1,10 @@
 <script>
-  const currentUrl = location.href;
+  var currentUrl = location.href;
+
+  // Check if "index.html" is already present to avoid looping
   if (!currentUrl.includes("index.html")) {
-    const path = location.pathname;
-    const query = location.search;
-    const hash = location.hash;
-    const newUrl = location.origin + "/index.html" + (query ? '?'+ query : "") + path + (hash ? hash : "");
-    location.replace(newUrl);
+    // Preserve the path, query params, and hash
+    var path = location.pathname + location.search + location.hash;
+    location.replace(location.origin + "/index.html?" + path);
   }
 </script>
