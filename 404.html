@@ -5,6 +5,6 @@
   if (!currentUrl.includes("index.html")) {
     // Preserve the path, query params, and hash
     var path = location.pathname + location.search + location.hash;
-    location.replace(location.origin + "/index.html" + path);
+    location.replace(location.origin + "/index.html?" + path);
   }
 </script>
