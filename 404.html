@@ -1,11 +1,10 @@
 <script>
-  if (sessionStorage.getItem("redirected") !== "true") {
-    sessionStorage.setItem("redirected", "true");
-    const path = location.pathname + location.search + location.hash;
-    console.log('path', path);
-    console.log('origin', location.origin);
-    location.replace(location.origin + path);
+  // Check if the pathname is empty or just "/"
+  if (location.pathname === "/" || location.pathname === "") {
+    location.replace(location.origin + "/index.html");
   } else {
-    sessionStorage.removeItem("redirected");
+    // Redirect to index.html while preserving the path, query params, and hash
+    var path = location.pathname + location.search + location.hash;
+    location.replace(location.origin + "/index.html" + path);
   }
 </script>
