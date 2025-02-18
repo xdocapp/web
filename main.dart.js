@@ -109642,7 +109642,7 @@ return A.v($async$K2,r)},
 OV(){var s=0,r=A.w(t.H),q=this,p
 var $async$OV=A.r(function(a,b){if(a===1)return A.t(b,r)
 while(true)switch(s){case 0:p=t.N
-A.b_y(null,A.ak(["Accept","text/event-stream","Cache-Control","no-cache"],p,p),B.Ax,null,"http://37.27.11.255:3000/sse").hV(new A.aEv(q))
+A.b_y(null,A.ak(["Accept","text/event-stream","Cache-Control","no-cache"],p,p),B.Ax,null,"https://37.27.11.255:3000/sse").hV(new A.aEv(q))
 return A.u(null,r)}})
 return A.v($async$OV,r)},
 Cj(){var s=0,r=A.w(t.H),q=this,p,o,n,m
@@ -109661,7 +109661,7 @@ A.aG(o)
 m=A.aeF(null)
 n=q.w
 s=4
-return A.q(m.aFk("http://37.27.11.255:3000/send-message",A.ak(["senderId",n,"receiverId",n,"message",o,"event","message"],t.N,t.T),t.z),$async$Cj)
+return A.q(m.aFk("https://37.27.11.255:3000/send-message",A.ak(["senderId",n,"receiverId",n,"message",o,"event","message"],t.N,t.T),t.z),$async$Cj)
 case 4:if(b.c===200){A.aG("Message sent successfully")
 p.mz(0,B.aok)}case 3:return A.u(null,r)}})
 return A.v($async$Cj,r)},
@@ -109736,7 +109736,7 @@ aEN(a,b){var s=0,r=A.w(t.H),q
 var $async$zj=A.r(function(c,d){if(c===1)return A.t(d,r)
 while(true)switch(s){case 0:A.aG("fileId: "+a)
 A.aG("fileName: "+b)
-q="http://37.27.11.255:3000"+("/file-download?fileId="+a)
+q="https://37.27.11.255:3000"+("/file-download?fileId="+a)
 s=5
 return A.q(A.aUO(A.cG(q,0,null)),$async$zj)
 case 5:s=d?2:4
